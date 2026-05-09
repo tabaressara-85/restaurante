@@ -24,7 +24,7 @@ body{
     padding: 16px;
 }
 body{
-    background-image: url(/pinguino.jpg);
+    background-image: url(pinguino.jpg);
     background-size: cover;
 
 }
