@@ -2,7 +2,7 @@ CSS
 
 .imagen{
 
-    background-image: url(pinguino.jpg);
+    background-image: url(/pinguino.jpg);
 }
 
 :root{
