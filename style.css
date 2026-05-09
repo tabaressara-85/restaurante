@@ -1,0 +1,206 @@
+CSS
+
+.imagen{
+
+    background-image: url(/pinguino.jpg);
+}
+
+:root{
+    --bg:#041c6d;
+    --card:#fffffff5;
+    --accent:#3c82b1;
+    --muted:#0728bd;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: #8852ec;
+    padding: 16px;
+}
+body{
+    background-image: url(/pinguino.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header h1{
+    margin: 0;
+    font-size: 20px;
+}
+
+.lead{
+    color: var(--muted);
+    margin-top: 4px;
+    font-size: 13px;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.panel{
+    background: var(--card);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.panel.wide{
+    grid-column: 1 / -1;
+}
+
+label{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+input[type="text"], input[type="datetime-local"], input[type="number"], input[type="date"]{
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    margin-top: 6px;
+}
+
+.actions{
+    margin-top: 8px;
+}
+
+.btn{
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    background: var(--accent);
+    color: #fff;
+    cursor: pointer;
+    margin-right: 6px;
+}
+
+.btn.outline{
+    background: transparent;
+    border: 1px solid #cfe0ff;
+    color: var(--accent);
+}
+
+.btn.primary{
+    background: #1a6ad8;
+}
+
+.tables{
+    display: flex;
+    flex-wrap: wrap;
+    gap:12px;
+    margin-top: 8px;
+}
+
+.tableCard{
+    width: 160px;
+    background: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 8px;
+    text-align: center;
+}
+
+.tableCard img{
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;margin-bottom: 10px;
+}
+
+.tableName{
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.tableDesc{
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.reportArea{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.report-card{
+    padding: 10px;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    font-size: 14px;
+}
+
+.report-card h4{
+    margin: 0 0 6px 0;
+}
+
+.report-card p{
+    margin: 4px 0;
+    color: #555;
+}
+
+.csvPreview{
+    margin-top: 12px;
+    padding: 10px;
+    border-radius: 8px;
+    background: #fff9e6;
+    border: 1px solid #ffe8a8;
+}
+
+.csv-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.csv-list{
+    max-height: 320px;
+    overflow: auto;
+}
+
+.csv-text pre{
+    max-height: 320px;
+    overflow: auto;
+    background: #f4f4f6;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+.hidden{
+    display: none;
+}
+
+/*Responsive*/
+
+@media(max-width:820px){
+    .main{
+            grid-template-columns: 1fr;
+        }
+    .csv-grid{
+        grid-template-columns: 1fr;
+        }
+}

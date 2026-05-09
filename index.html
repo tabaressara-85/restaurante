@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas</title>
+    <title>Imagen fondo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <header>
+            <h1>Reservas - Restaurante "EL PINGUINO"</h1>
+            <p class="lead">Interación directa: reservar desde la tarjeta o desde el formulario</p>
+        </header>
+
+        <main class="main">
+            <section class="panel">
+                <h2>Nueva reserva</h2>
+                <form id="formReservation">
+                    <label>Nombre
+                        <input id="name" type="text" placeholder="Ej: Juan Pérez" required>
+                    </label>
+
+                    <label>Contacto (tel o e-mail)
+                        <input id="contact" type="text" placeholder="Ej: 3001234567">
+                    </label>
+
+                    <label>Fecha y Hora
+                        <input id="datetime" type="datetime-local" required>
+                    </label>
+
+                    <label>Mesa (número)
+                        <input id="table" type="number" min="1" max="12" value="1" required>
+                    </label>
+
+                    <div class="actions">
+                        <button type="submit" class="btn">Guardar reserva</button>
+                        <button id="clearBtn" type="button" class="btn outline">Limpiar</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="panel">
+                <h2>Mesas</h2>
+                <div id="tables" class="tables"></div>
+            </section>
+
+            <section class="panel wide">
+                <h2>Reporte de reservas</h2>
+
+                <div class="report-controls">
+                    <label>Desde
+                        <input id="fromDate" type="date">
+                    </label>
+
+                    <label>Hasta
+                        <input id="toDate" type="date">
+                    </label>
+
+                    <button id="btnShowReport" class="btn">Mostrar reporte</button>
+                    <button id="btnPreviewCsv" class="btn outline">Previsualizar CSV</button>
+                    <button id="btnExportCsv" class="btn primary">Exportar CSV</button>
+                </div>
+
+                <div id="reportArea" class="reportArea"></div>
+
+                <div id="csvPreview" class="csvPreview hidden">
+                    <div class="csv-grid">
+                        <div class="csv-list">
+                            <h3>Reservas (vista rápida)</h3>
+                            <div id="csvList"></div>
+                        </div>
+                        <div class="csv-text">
+                            <h3>CSV Preview</h3>
+                            <pre id="csvText"></pre>
+                            <div class="actions">
+                                <button id="btnDownloadFromPreview" class="btn primary">Descargar CSV</button>
+                                <button id="btnClosePreview" class="btn outline">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <small>Proyecto educativo.</small>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
